@@ -1,13 +1,13 @@
 package cl.amisoft.causaapp.vo;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 public class CausaVo implements Serializable {
     private Long id;
     private String nombre;
-    private LocalDateTime fechaCreacion;
+    private LocalDate fechaCreacion;
     private List<TramiteCausaVo> tramites;
 
     public CausaVo(Builder builder){
@@ -37,11 +37,11 @@ public class CausaVo implements Serializable {
         this.nombre = nombre;
     }
 
-    public LocalDateTime getFechaCreacion() {
+    public LocalDate getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+    public void setFechaCreacion(LocalDate fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 
@@ -57,7 +57,7 @@ public class CausaVo implements Serializable {
 
         private Long id;
         private String nombre;
-        private LocalDateTime fechaCreacion;
+        private LocalDate fechaCreacion;
         private List<TramiteCausaVo> tramites;
 
         public Builder id(Long id){
@@ -70,7 +70,7 @@ public class CausaVo implements Serializable {
             return this;
         }
 
-        public Builder fechaCreacion(LocalDateTime fechaCreacion){
+        public Builder fechaCreacion(LocalDate fechaCreacion){
             this.fechaCreacion = fechaCreacion;
             return this;
         }

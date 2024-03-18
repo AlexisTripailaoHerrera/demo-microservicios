@@ -1,7 +1,7 @@
 package cl.amisoft.causaapp.model;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "causa", schema = "pjud")
@@ -14,7 +14,7 @@ public class Causa {
     private String nombre;
 
     @Column(name = "fecha_creacion")
-    private LocalDateTime fechaCreacion;
+    private LocalDate fechaCreacion;
 
     public Causa(){
 
@@ -42,18 +42,18 @@ public class Causa {
         this.nombre = nombre;
     }
 
-    public LocalDateTime getFechaCreacion() {
+    public LocalDate getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+    public void setFechaCreacion(LocalDate fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 
     public static class Builder {
         private Long id;
         private String nombre;
-        private LocalDateTime fechaCreacion;
+        private LocalDate fechaCreacion;
 
         public Builder id(Long id) {
             this.id = id;
@@ -65,7 +65,7 @@ public class Causa {
             return this;
         }
 
-        public Builder fechaCrecion(LocalDateTime fechaCreacion){
+        public Builder fechaCrecion(LocalDate fechaCreacion){
             this.fechaCreacion = fechaCreacion;
             return this;
         }

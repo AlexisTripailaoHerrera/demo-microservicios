@@ -8,7 +8,7 @@ public class TramiteCausaVo implements Serializable {
     private Long id;
     private Long causa;
     private String nombreTramite;
-    private LocalDate fecha;
+    private LocalDate fechaCreacion;
 
     public TramiteCausaVo() {
     }
@@ -17,7 +17,7 @@ public class TramiteCausaVo implements Serializable {
         id = builder.id;
         causa = builder.causa;
         nombreTramite = builder.nombreTramite;
-        fecha = builder.fecha;
+        fechaCreacion = builder.fechaCreacion;
     }
 
     public Long getId() {
@@ -44,19 +44,19 @@ public class TramiteCausaVo implements Serializable {
         this.nombreTramite = nombreTramite;
     }
 
-    public LocalDate getFecha() {
-        return fecha;
+    public LocalDate getFechaCreacion() {
+        return fechaCreacion;
     }
 
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
+    public void setFechaCreacion(LocalDate fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
     }
 
     public static class Builder {
         private Long id;
         private Long causa;
         private String nombreTramite;
-        private LocalDate fecha;
+        private LocalDate fechaCreacion;
 
         public Builder id(Long id) {
             this.id = id;
@@ -74,7 +74,7 @@ public class TramiteCausaVo implements Serializable {
         }
 
         public Builder fecha(LocalDate fecha) {
-            this.fecha = fecha;
+            this.fechaCreacion = fecha;
             return this;
         }
 
